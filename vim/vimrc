@@ -1,0 +1,6 @@
+set cindent		"indent
+set autoindent	"auto indent
+set sw=4		"sw tab width
+set ts=4		"tab stop
+
+set tags+=/root/linux-4.15.9/tags
