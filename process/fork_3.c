@@ -11,7 +11,7 @@ int main()
 	if (pid >0) {
 		printf("parent pid=%d\n", getpid());
 	} else if (pid == 0) {
-		printf("chile. pid=%d\n", getpid());
+		printf("child pid=%d\n", getpid());
 	} else {
 		perror("fork");
 	}
