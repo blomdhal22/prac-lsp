@@ -9,7 +9,7 @@ int main()
 	fd = open("aaa", O_RDONLY);
 	ret = read(fd, buff, 2);
 	write(1, buff, ret);
-	ret = read(fd buff, 2);
+	ret = read(fd, buff, 2);
 	write(1, buff, ret);
 	close(fd);
 	return 0;
