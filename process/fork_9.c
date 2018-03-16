@@ -24,6 +24,7 @@ void my_sig(int signo)
 {
 	printf("my_sig. no=%d, pid=%d, tid=%ld\n", signo, getpid(), syscall(224));
 	// non-block
+	//while(wait(0) > 0)
 	while(waitpid(-1, 0, WNOHANG) > 0)
 		;
 }
