@@ -4,7 +4,7 @@
 
 void *thread_routine(void *arg)
 {
-	sleep(3);
+	sleep(10);
 	return 0;
 }
 
