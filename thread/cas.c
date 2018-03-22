@@ -18,15 +18,22 @@ void spin_lock(int *mutex)
 	while(__bionic_cmpxchg(0, 1, mutex));
 }
 
+void spin_unlock(int *mutex)
+{
+	while(__bionic_cmpxchg(1, 0, mutex));
+}
+
 int main(void)
 {
 
 	int ret;
 	spin_lock(&mutex);
 	printf("Enter critical secion 1.\n");
+	//spin_unlock(&mutex);
 
 	spin_lock(&mutex);
 	printf("Enter critical secion 2.\n");
+	spin_unlock(&mutex);
 
 	return 0;
 }
